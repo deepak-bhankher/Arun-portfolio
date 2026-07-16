@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 
 import { Film, Clapperboard, Scissors } from "lucide-react";
 
-
+// 🎨 Premium palette — deep royal blue to sky cyan
+const NAVY = "#0a2a88";
+const SKY = "#59CDE9";
 
 const CHIPS = [
   { icon: Clapperboard, label: "Premiere Pro", className: "-top-5 -left-6 md:-left-10" },
@@ -15,68 +17,69 @@ function Hero() {
   return (
     <section
       id="Hero"
-      className="relative min-h-screen flex items-center px-6 md:px-16 pt-32 pb-24 md:pt-28 md:pb-12 overflow-hidden bg-[#0B0E14]"
+      className="relative min-h-screen flex items-center px-6 md:px-16 pt-32 pb-24 md:pt-28 md:pb-12 overflow-hidden bg-[#050B1F]"
     >
       {/* Ambient glow orbs */}
-      <div className="pointer-events-none absolute -top-32 -left-24 w-[420px] h-[420px] rounded-full bg-[#FF7A00]/20 blur-[120px]" />
-      <div className="pointer-events-none absolute -bottom-32 -right-16 w-[460px] h-[460px] rounded-full bg-[#00E5FF]/10 blur-[130px]" />
+      <div className="pointer-events-none absolute -top-32 -left-24 w-[420px] h-[420px] rounded-full bg-[#0a2a88]/30 blur-[120px]" />
+      <div className="pointer-events-none absolute -bottom-32 -right-16 w-[460px] h-[460px] rounded-full bg-[#59CDE9]/15 blur-[130px]" />
 
-      {/* Oversized background typography */}
+      {/* Oversized background typography — kept tight/centered so it sits
+          right around the portrait photo, not spread across the whole section */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
-  <motion.span
-    initial={{ opacity: 0, scale: 1.08 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1.4, ease: "easeOut" }}
-    className="
-      whitespace-nowrap
-      font-extrabold
-      uppercase
-      leading-[0.95]
-      tracking-tight
-      text-[13vw]
-      md:text-[7.5vw]
-      bg-gradient-to-r
-      from-[#FF9A3C]
-      via-[#FFB800]
-      to-[#00E5FF]
-      bg-clip-text
-      text-transparent
-      opacity-10
-    "
-    style={{
-      textShadow: "0 0 40px rgba(0,229,255,0.12)",
-    }}
-  >
-    Video
-  </motion.span>
+        <motion.span
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut" }}
+          className="
+            whitespace-nowrap
+            font-extrabold
+            uppercase
+            leading-[0.95]
+            tracking-tight
+            text-[15vw]
+            md:text-[7.5vw]
+            bg-gradient-to-r
+            from-[#0a2a88]
+            via-[#3E6FD9]
+            to-[#59CDE9]
+            bg-clip-text
+            text-transparent
+            opacity-30
+          "
+          style={{
+            textShadow: "0 0 40px rgba(89,205,233,0.15)",
+          }}
+        >
+          Video
+        </motion.span>
 
-  <motion.span
-    initial={{ opacity: 0, scale: 1.08 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
-    className="
-      whitespace-nowrap
-      font-extrabold
-      uppercase
-      leading-[0.95]
-      tracking-tight
-      text-[13vw]
-      md:text-[7.5vw]
-      bg-gradient-to-r
-      from-[#FF9A3C]
-      via-[#FFB800]
-      to-[#00E5FF]
-      bg-clip-text
-      text-transparent
-      opacity-10
-    "
-    style={{
-      textShadow: "0 0 40px rgba(255,154,60,0.12)",
-    }}
-  >
-    Editor
-  </motion.span>
-</div>
+        <motion.span
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
+          className="
+            whitespace-nowrap
+            font-extrabold
+            uppercase
+            leading-[0.95]
+            tracking-tight
+            text-[15vw]
+            md:text-[7.5vw]
+            bg-gradient-to-r
+            from-[#0a2a88]
+            via-[#3E6FD9]
+            to-[#59CDE9]
+            bg-clip-text
+            text-transparent
+            opacity-30
+          "
+          style={{
+            textShadow: "0 0 40px rgba(10,42,136,0.15)",
+          }}
+        >
+          Editor
+        </motion.span>
+      </div>
 
       {/* Main split layout */}
       <div className="relative z-10 w-full max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.9fr] items-center gap-16 md:gap-10">
@@ -93,7 +96,7 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="inline-block mb-5 px-4 py-1.5 rounded-full text-xs font-medium tracking-[0.2em] uppercase
-              text-[#FF9A3C] bg-white/5 backdrop-blur-md border border-[#00E5FF]/25"
+              text-[#59CDE9] bg-white/5 backdrop-blur-md border border-[#59CDE9]/25"
           >
             Available for projects
           </motion.span>
@@ -111,7 +114,7 @@ function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="block font-serif italic bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF] bg-clip-text text-transparent drop-shadow-lg"
+              className="block font-serif italic bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9] bg-clip-text text-transparent drop-shadow-lg"
             >
               Arun
             </motion.span>
@@ -131,7 +134,7 @@ function Hero() {
             animate={{ opacity: 1, scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.45 }}
             style={{ transformOrigin: "left" }}
-            className="hidden md:block mt-5 h-[2px] w-16 rounded-full bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF]"
+            className="hidden md:block mt-5 h-[2px] w-16 rounded-full bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9]"
           />
 
           <motion.div
@@ -148,8 +151,8 @@ function Hero() {
               }}
               className="px-5 py-3 cursor-pointer rounded-xl text-white/90 font-medium
                 bg-white/10 backdrop-blur-md border border-white/20
-                shadow-[0_4px_24px_rgba(0,229,255,0.12)]
-                hover:bg-white/20 hover:border-[#00E5FF]/50 hover:shadow-[0_4px_32px_rgba(0,229,255,0.3)]
+                shadow-[0_4px_24px_rgba(89,205,233,0.12)]
+                hover:bg-white/20 hover:border-[#59CDE9]/50 hover:shadow-[0_4px_32px_rgba(89,205,233,0.3)]
                 transition-all duration-300"
             >
               Learn More About Me ↓
@@ -160,9 +163,9 @@ function Hero() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.96 }}
                 className="px-5 py-3 cursor-pointer rounded-xl font-medium
-                bg-[#FF9A3C]/15 backdrop-blur-md border border-[#FF9A3C]/40 text-[#FF9A3C]
-                shadow-[0_4px_24px_rgba(255,154,60,0.2)]
-                hover:bg-[#FF9A3C]/25 hover:border-[#FF9A3C]/70 hover:shadow-[0_4px_32px_rgba(255,154,60,0.4)]
+                bg-[#0a2a88]/20 backdrop-blur-md border border-[#59CDE9]/40 text-[#59CDE9]
+                shadow-[0_4px_24px_rgba(10,42,136,0.3)]
+                hover:bg-[#0a2a88]/30 hover:border-[#59CDE9]/70 hover:shadow-[0_4px_32px_rgba(89,205,233,0.4)]
                 transition-all duration-300"
               >
                 Download CV 📄
@@ -186,12 +189,12 @@ function Hero() {
             className="relative"
           >
             {/* corner brackets — viewfinder frame */}
-            <span className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-[#00E5FF]/60 rounded-tl-md" />
-            <span className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-[#00E5FF]/60 rounded-tr-md" />
-            <span className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-[#00E5FF]/60 rounded-bl-md" />
-            <span className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-[#00E5FF]/60 rounded-br-md" />
+            <span className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-[#59CDE9]/60 rounded-tl-md" />
+            <span className="absolute -top-3 -right-3 w-8 h-8 border-t-2 border-r-2 border-[#59CDE9]/60 rounded-tr-md" />
+            <span className="absolute -bottom-3 -left-3 w-8 h-8 border-b-2 border-l-2 border-[#59CDE9]/60 rounded-bl-md" />
+            <span className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-[#59CDE9]/60 rounded-br-md" />
 
-            <div className="p-1.5 rounded-3xl bg-gradient-to-br from-[#FF9A3C]/30 via-[#00E5FF]/20 to-transparent">
+            <div className="p-1.5 rounded-3xl bg-gradient-to-br from-[#0a2a88]/40 via-[#59CDE9]/20 to-transparent">
               <img
                 src="arun.jpeg"
                 alt="Arun - Video Editor & Motion Designer"
@@ -213,7 +216,7 @@ function Hero() {
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
                   className="flex items-center gap-2 px-3 py-2 rounded-xl
-                    bg-[#0B0E14]/90 backdrop-blur-md border border-[#00E5FF]/25 text-[#FF9A3C]
+                    bg-[#050B1F]/90 backdrop-blur-md border border-[#59CDE9]/25 text-[#59CDE9]
                     shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
                 >
                   <Icon size={16} />
@@ -232,11 +235,11 @@ function Hero() {
         transition={{ delay: 1, duration: 0.6 }}
         className="hidden md:flex flex-col items-center gap-2 absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
       >
-        <span className="text-[10px] tracking-[0.3em] uppercase text-[#00E5FF]/60">Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase text-[#59CDE9]/60">Scroll</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="w-[1px] h-8 bg-gradient-to-b from-[#00E5FF]/70 to-transparent"
+          className="w-[1px] h-8 bg-gradient-to-b from-[#59CDE9]/70 to-transparent"
         />
       </motion.div>
     </section>

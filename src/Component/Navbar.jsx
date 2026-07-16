@@ -18,6 +18,10 @@ const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponen
   WHATSAPP_MESSAGE
 )}`;
 
+// 🎨 Premium palette — deep royal blue to sky cyan
+const NAVY = "#0a2a88";
+const SKY = "#59CDE9";
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("Hero");
@@ -76,11 +80,11 @@ export default function Navbar() {
       >
         <div
           className={`relative max-w-5xl mx-auto rounded-2xl px-5 overflow-hidden
-            bg-[#0B0E14]/75 backdrop-blur-xl
+            bg-[#050B1F]/75 backdrop-blur-xl
             transition-all duration-500 ${
               scrolled
-                ? "border border-[#FF7A00]/30 shadow-[0_8px_32px_rgba(255,122,0,0.2)]"
-                : "border border-[#00E5FF]/10 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                ? "border border-[#59CDE9]/30 shadow-[0_8px_32px_rgba(10,42,136,0.45)]"
+                : "border border-[#59CDE9]/10 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
             }`}
         >
           <div className="flex items-center justify-between h-[62px]">
@@ -92,20 +96,20 @@ export default function Navbar() {
               className="flex items-center gap-2.5 cursor-pointer group"
             >
               <span
-                className="relative w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm text-[#0B0E14]"
+                className="relative w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm text-white"
                 style={{
-                  background: "linear-gradient(135deg, #FF9A3C, #00E5FF)",
-                  boxShadow: "0 0 16px rgba(255,122,0,0.5)",
+                  background: `linear-gradient(135deg, ${NAVY}, ${SKY})`,
+                  boxShadow: "0 0 16px rgba(89,205,233,0.5)",
                 }}
               >
                 A
                 <motion.span
                   className="absolute inset-0 rounded-full"
-                  style={{ boxShadow: "0 0 0 0 rgba(255,154,60,0.6)" }}
+                  style={{ boxShadow: "0 0 0 0 rgba(89,205,233,0.6)" }}
                   animate={{
                     boxShadow: [
-                      "0 0 0 0 rgba(0,229,255,0.45)",
-                      "0 0 0 6px rgba(0,229,255,0)",
+                      "0 0 0 0 rgba(89,205,233,0.45)",
+                      "0 0 0 6px rgba(89,205,233,0)",
                     ],
                   }}
                   transition={{
@@ -115,7 +119,12 @@ export default function Navbar() {
                   }}
                 />
               </span>
-              <span className="font-bold text-[17px] tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-[#FF9A3C] via-white to-[#00E5FF]">
+              <span
+                className="font-bold text-[17px] tracking-tight bg-clip-text text-transparent"
+                style={{
+                  backgroundImage: `linear-gradient(90deg, ${SKY}, #ffffff, ${NAVY})`,
+                }}
+              >
                 Arun
               </span>
             </motion.div>
@@ -136,7 +145,7 @@ export default function Navbar() {
                       href={`#${item.id}`}
                       whileTap={{ scale: 0.96 }}
                       className={`relative px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-300 block
-                        ${isActive ? "text-[#FF9A3C]" : "text-white/55 hover:text-[#00E5FF]"}`}
+                        ${isActive ? "text-[#59CDE9]" : "text-white/55 hover:text-[#59CDE9]"}`}
                     >
                       <span className="relative z-10">{item.label}</span>
 
@@ -146,8 +155,8 @@ export default function Navbar() {
                           layoutId="nav-underline"
                           className="absolute left-3 right-3 -bottom-0.5 h-[2px] rounded-full"
                           style={{
-                            background: "linear-gradient(90deg, #FF9A3C, #00E5FF)",
-                            boxShadow: "0 0 8px rgba(255,154,60,0.6)",
+                            background: `linear-gradient(90deg, ${NAVY}, ${SKY})`,
+                            boxShadow: "0 0 8px rgba(89,205,233,0.6)",
                           }}
                           transition={{ type: "spring", stiffness: 420, damping: 32 }}
                         />
@@ -161,7 +170,7 @@ export default function Navbar() {
                           whileHover={{ scaleX: 1 }}
                           transition={{ duration: 0.25, ease: "easeOut" }}
                           style={{
-                            background: "linear-gradient(90deg, #FF9A3C55, #00E5FF55)",
+                            background: `linear-gradient(90deg, ${NAVY}55, ${SKY}55)`,
                           }}
                         />
                       )}
@@ -183,10 +192,12 @@ export default function Navbar() {
                   whileHover={{ scale: 1.04, y: -1 }}
                   whileTap={{ scale: 0.97 }}
                   className="px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer
-                    text-[#0B0E14] border border-black/10
-                    bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF]
-                    hover:shadow-[0_0_22px_rgba(255,154,60,0.5)]
+                    text-white border border-white/10
+                    hover:shadow-[0_0_22px_rgba(89,205,233,0.5)]
                     transition-shadow duration-300"
+                  style={{
+                    background: `linear-gradient(90deg, ${NAVY}, ${SKY})`,
+                  }}
                 >
                   Hire Me 🎬
                 </motion.button>
@@ -197,11 +208,13 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.87 }}
               onClick={() => setOpen(!open)}
-              className="md:hidden cursor-pointer border border-black/10
-                p-2 rounded-xl text-[#0B0E14]
-                bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF]
-                shadow-[0_0_14px_rgba(255,154,60,0.4)]
+              className="md:hidden cursor-pointer border border-white/10
+                p-2 rounded-xl text-white
+                shadow-[0_0_14px_rgba(89,205,233,0.4)]
                 transition-all duration-300"
+              style={{
+                background: `linear-gradient(90deg, ${NAVY}, ${SKY})`,
+              }}
             >
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
@@ -224,7 +237,7 @@ export default function Navbar() {
             style={{
               scaleX: progressWidth,
               width: "100%",
-              background: "linear-gradient(90deg, #FF9A3C, #00E5FF)",
+              background: `linear-gradient(90deg, ${NAVY}, ${SKY})`,
             }}
           />
         </div>
@@ -255,9 +268,9 @@ export default function Navbar() {
             className="fixed top-[82px] left-4 right-4 z-40 md:hidden"
           >
             <div
-              className="bg-[#0B0E14]/95 backdrop-blur-xl rounded-2xl
-              border border-[#00E5FF]/20
-              shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,154,60,0.1)]
+              className="bg-[#050B1F]/95 backdrop-blur-xl rounded-2xl
+              border border-[#59CDE9]/20
+              shadow-[0_20px_60px_rgba(0,0,0,0.5),0_0_0_1px_rgba(10,42,136,0.25)]
               overflow-hidden"
             >
               <ul className="flex flex-col list-none px-3 py-3 gap-1">
@@ -277,11 +290,11 @@ export default function Navbar() {
                         whileTap={{ scale: 0.97 }}
                         className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl
                           text-sm font-medium transition-all duration-200
-                          ${isActive ? "text-[#FF9A3C] bg-black/20" : "text-white/70 hover:bg-black/20 hover:text-[#00E5FF]"}`}
+                          ${isActive ? "text-[#59CDE9] bg-black/20" : "text-white/70 hover:bg-black/20 hover:text-[#59CDE9]"}`}
                       >
                         <span
                           className="w-1.5 h-1.5 rounded-full shrink-0"
-                          style={{ background: isActive ? "#FF9A3C" : "#00E5FF" }}
+                          style={{ background: isActive ? SKY : NAVY }}
                         />
                         {item.label}
                       </motion.a>
@@ -305,10 +318,12 @@ export default function Navbar() {
                       whileTap={{ scale: 0.97 }}
                       className="w-full flex justify-center items-center gap-2
                       py-3 px-6 rounded-xl cursor-pointer
-                      text-sm font-semibold text-[#0B0E14] border border-black/10
-                      bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF]
-                      shadow-[0_0_20px_rgba(255,154,60,0.45)]
+                      text-sm font-semibold text-white border border-white/10
+                      shadow-[0_0_20px_rgba(89,205,233,0.45)]
                       transition-shadow duration-300"
+                      style={{
+                        background: `linear-gradient(90deg, ${NAVY}, ${SKY})`,
+                      }}
                     >
                       Hire Me 🎬
                     </motion.button>
