@@ -3,7 +3,20 @@ import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
 import { RxCross1 } from "react-icons/rx";
 import { CiMenuFries } from "react-icons/ci";
 
-const NAV_ITEMS = ["Home", "About", "Work", "Contact"];
+// label = jo text dikhta hai, id = jis section ka id match karna hai
+const NAV_ITEMS = [
+  { label: "Home", id: "Hero" },
+  { label: "About", id: "about" },
+  { label: "Work", id: "experience" },
+  { label: "Contact", id: "contact" },
+];
+
+// 👇 Apna WhatsApp number yahan daal de (country code ke saath, bina + ke)
+const WHATSAPP_NUMBER = "918570083067";
+const WHATSAPP_MESSAGE = "Hello Arun";
+const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+  WHATSAPP_MESSAGE
+)}`;
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -35,9 +48,7 @@ export default function Navbar() {
       }
       lastScrollY.current = currentY;
 
-      const sections = NAV_ITEMS.map((item) =>
-        document.getElementById(item === "Home" ? "Hero" : item.toLowerCase()),
-      );
+      const sections = NAV_ITEMS.map((item) => document.getElementById(item.id));
       sections.forEach((sec) => {
         if (sec) {
           const rect = sec.getBoundingClientRect();
@@ -112,23 +123,22 @@ export default function Navbar() {
             {/* Desktop Links - underline style */}
             <ul className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2 list-none m-0 p-0">
               {NAV_ITEMS.map((item, i) => {
-                const id = item === "Home" ? "Hero" : item.toLowerCase();
-                const isActive = active === id;
+                const isActive = active === item.id;
                 return (
                   <motion.li
-                    key={item}
+                    key={item.label}
                     initial={{ opacity: 0, y: -8 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.08 + i * 0.06, duration: 0.35 }}
                     className="relative list-none"
                   >
                     <motion.a
-                      href={`#${id}`}
+                      href={`#${item.id}`}
                       whileTap={{ scale: 0.96 }}
                       className={`relative px-3 py-2 text-sm font-medium tracking-wide transition-colors duration-300 block
                         ${isActive ? "text-[#FF9A3C]" : "text-white/55 hover:text-[#00E5FF]"}`}
                     >
-                      <span className="relative z-10">{item}</span>
+                      <span className="relative z-10">{item.label}</span>
 
                       {/* Active underline - slides between items */}
                       {isActive && (
@@ -161,14 +171,14 @@ export default function Navbar() {
               })}
             </ul>
 
-            {/* Desktop CTA */}
+            {/* Desktop CTA — WhatsApp */}
             <motion.div
               initial={{ opacity: 0, x: 16 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.45, delay: 0.2 }}
               className="hidden md:block"
             >
-              <a href="/Arun_Resume.pdf" download>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <motion.button
                   whileHover={{ scale: 1.04, y: -1 }}
                   whileTap={{ scale: 0.97 }}
@@ -252,18 +262,17 @@ export default function Navbar() {
             >
               <ul className="flex flex-col list-none px-3 py-3 gap-1">
                 {NAV_ITEMS.map((item, i) => {
-                  const id = item === "Home" ? "Hero" : item.toLowerCase();
-                  const isActive = active === id;
+                  const isActive = active === item.id;
                   return (
                     <motion.li
-                      key={item}
+                      key={item.label}
                       initial={{ opacity: 0, x: -12 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.05, duration: 0.22 }}
                       className="list-none"
                     >
                       <motion.a
-                        href={`#${id}`}
+                        href={`#${item.id}`}
                         onClick={() => setOpen(false)}
                         whileTap={{ scale: 0.97 }}
                         className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl
@@ -274,7 +283,7 @@ export default function Navbar() {
                           className="w-1.5 h-1.5 rounded-full shrink-0"
                           style={{ background: isActive ? "#FF9A3C" : "#00E5FF" }}
                         />
-                        {item}
+                        {item.label}
                       </motion.a>
                     </motion.li>
                   );
@@ -286,7 +295,12 @@ export default function Navbar() {
                   transition={{ delay: 0.3, duration: 0.22 }}
                   className="list-none mt-1 pt-3 border-t border-white/10"
                 >
-                  <a href="/Arun_Resume.pdf" download onClick={() => setOpen(false)}>
+                  <a
+                    href={WHATSAPP_LINK}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                  >
                     <motion.button
                       whileTap={{ scale: 0.97 }}
                       className="w-full flex justify-center items-center gap-2

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Clock, Clapperboard, Globe2, Sparkles } from "lucide-react";
 
 const CARDS = [
-  { title: "3+ Years", sub: "Experience", icon: Clock },
+  { title: "1.5 Years", sub: "Experience", icon: Clock },
   { title: "150+", sub: "Projects Edited", icon: Clapperboard },
   { title: "Remote", sub: "Worldwide Clients", icon: Globe2 },
   { title: "Open to Work", sub: "Availability", icon: Sparkles },
@@ -61,7 +61,7 @@ function About() {
             <span className="font-bold bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF] bg-clip-text text-transparent">
               Video Editor & Motion Designer
             </span>{" "}
-            with 3+ years of experience turning raw footage into cinematic,
+            with 1+ years of experience turning raw footage into cinematic,
             high-converting content for brands, creators and businesses.
           </motion.p>
           <motion.p
@@ -74,10 +74,12 @@ function About() {
           >
             I work with{" "}
             <span className="font-bold bg-gradient-to-r from-[#FF9A3C] via-[#FFB800] to-[#00E5FF] bg-clip-text text-transparent">
-              Premiere Pro, After Effects & DaVinci Resolve
+             I’m a video editor who loves turning raw footage into clean,
             </span>{" "}
-            to craft smooth transitions, color grading, motion graphics and
-            storytelling that keeps audiences engaged from start to finish.
+     
+engaging, and powerful visuals. I edit cinematic videos,
+reels, YouTube content, and story-driven projects. My goal
+is simple make your ideas look amazing on screen.
           </motion.p>
         </div>
 

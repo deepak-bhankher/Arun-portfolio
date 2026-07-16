@@ -23,25 +23,60 @@ function Hero() {
 
       {/* Oversized background typography */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
-        <motion.span
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: "easeOut" }}
-          className="whitespace-nowrap font-extrabold uppercase leading-[0.95] tracking-tight text-[13vw] md:text-[7.5vw]"
-          style={{ WebkitTextStroke: "1px rgba(255,154,60,0.14)", color: "transparent" }}
-        >
-          Video
-        </motion.span>
-        <motion.span
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
-          className="whitespace-nowrap font-extrabold uppercase leading-[0.95] tracking-tight text-[13vw] md:text-[7.5vw]"
-          style={{ WebkitTextStroke: "1px rgba(0,229,255,0.14)", color: "transparent" }}
-        >
-          Editor
-        </motion.span>
-      </div>
+  <motion.span
+    initial={{ opacity: 0, scale: 1.08 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.4, ease: "easeOut" }}
+    className="
+      whitespace-nowrap
+      font-extrabold
+      uppercase
+      leading-[0.95]
+      tracking-tight
+      text-[13vw]
+      md:text-[7.5vw]
+      bg-gradient-to-r
+      from-[#FF9A3C]
+      via-[#FFB800]
+      to-[#00E5FF]
+      bg-clip-text
+      text-transparent
+      opacity-10
+    "
+    style={{
+      textShadow: "0 0 40px rgba(0,229,255,0.12)",
+    }}
+  >
+    Video
+  </motion.span>
+
+  <motion.span
+    initial={{ opacity: 0, scale: 1.08 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1.4, ease: "easeOut", delay: 0.1 }}
+    className="
+      whitespace-nowrap
+      font-extrabold
+      uppercase
+      leading-[0.95]
+      tracking-tight
+      text-[13vw]
+      md:text-[7.5vw]
+      bg-gradient-to-r
+      from-[#FF9A3C]
+      via-[#FFB800]
+      to-[#00E5FF]
+      bg-clip-text
+      text-transparent
+      opacity-10
+    "
+    style={{
+      textShadow: "0 0 40px rgba(255,154,60,0.12)",
+    }}
+  >
+    Editor
+  </motion.span>
+</div>
 
       {/* Main split layout */}
       <div className="relative z-10 w-full max-w-6xl mx-auto grid md:grid-cols-[1.1fr_0.9fr] items-center gap-16 md:gap-10">

@@ -28,7 +28,7 @@ function Experience() {
           text-[#FF9A3C] bg-white/5 backdrop-blur-md border border-[#00E5FF]/25">
           Where I've worked
         </span>
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#FF9A3C] via-white to-[#00E5FF] bg-clip-text text-transparent">
+        <h2 className=" text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#FF9A3C] via-white to-[#00E5FF] bg-clip-text text-transparent">
   Work Experience
 </h2>
         <p className="text-center text-white/45 mt-3">
@@ -88,7 +88,7 @@ function Experience() {
               </h3>
               <div className="flex items-center gap-2 text-[#00E5FF]">
                 <Calendar size={16} />
-                <span className="text-sm">2023 - Present</span>
+                <span className="text-sm">2024 - Present</span>
               </div>
             </div>
 
@@ -99,8 +99,8 @@ function Experience() {
 
             <ul className="mt-5 space-y-3">
               {[
-                "Edited 150+ videos across reels, ads, and YouTube content",
-                "Delivered cinematic color grading and sound design",
+                "# Growumedia (Mohali) :- (1-Aug-2025 to 31-Oct-2025)",
+                "# Superblizz Banglore (Remote) :- (15-November-2025 to 10-may-26)",
                 "Collaborated directly with brands to match their voice",
                 "Handled full pipeline from raw footage to final export",
               ].map((point, i) => (
