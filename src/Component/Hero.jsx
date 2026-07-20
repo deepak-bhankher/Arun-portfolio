@@ -24,7 +24,7 @@ function Hero() {
       <div className="pointer-events-none absolute -bottom-32 -right-16 w-[460px] h-[460px] rounded-full bg-[#59CDE9]/15 blur-[130px]" />
 
       {/* Oversized background typography — centered, image (z-10) sits right side on top of it */}
-      <div className="pointer-events-none -translate-y-6    absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
+      <div className="pointer-events-none -translate-y-6  hidden md:flex   absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
         <motion.span
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
