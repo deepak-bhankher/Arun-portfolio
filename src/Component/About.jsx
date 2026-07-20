@@ -43,7 +43,7 @@ function About() {
         >
           Get to know me
         </span>
-        <h2 className="text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#0a2a88] via-white to-[#59CDE9] bg-clip-text text-transparent">
+        <h2 className="text-center text-4xl md:text-5xl font-extrabold text-white">
           About Me
         </h2>
         <span className="mt-4 h-[2px] w-16 rounded-full bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9]" />
@@ -62,7 +62,7 @@ function About() {
             className="text-white/70 text-lg leading-relaxed border-l-4 border-[#59CDE9]/40 pl-5"
           >
             I'm a passionate{" "}
-            <span className="font-bold bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9] bg-clip-text text-transparent">
+            <span className="font-bold bg-[#59CDE9] bg-clip-text text-transparent">
               Video Editor & Motion Designer
             </span>{" "}
             with 1+ years of experience turning raw footage into cinematic,
@@ -77,7 +77,7 @@ function About() {
             className="text-white/70 text-lg leading-relaxed border-l-4 border-[#0a2a88]/50 pl-5"
           >
             I work with{" "}
-            <span className="font-bold bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9] bg-clip-text text-transparent">
+            <span className="font-bold font-bold bg-[#59CDE9] bg-clip-text text-transparent bg-clip-text text-transparent">
              I’m a video editor who loves turning raw footage into clean,
             </span>{" "}
      

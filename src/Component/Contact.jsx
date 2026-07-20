@@ -55,7 +55,7 @@ function Contact() {
           text-[#59CDE9] bg-white/5 backdrop-blur-md border border-[#59CDE9]/25">
           Get in touch
         </span>
-<h2 className="text-center text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-[#0a2a88] via-white to-[#59CDE9] bg-clip-text text-transparent">Let's Create Together</h2>
+<h2 className="text-center text-4xl md:text-5xl font-extrabold text-white bg-clip-text ">Let's Create Together</h2>
 
         <p className="text-center text-white/45 mt-3 max-w-md">
           Got a project, a story to tell, or just want to say hi? Drop a message below.

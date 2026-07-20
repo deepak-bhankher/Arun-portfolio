@@ -9,8 +9,8 @@ const SKY = "#59CDE9";
 
 const CHIPS = [
   { icon: Clapperboard, label: "Premiere Pro", className: "-top-5 -left-6 md:-left-10" },
-  { icon: Film, label: "After Effects", className: "top-1/2 -right-6 md:-right-10 -translate-y-1/2" },
-  { icon: Scissors, label: "DaVinci Resolve", className: "-bottom-5 -left-4 md:-left-8" },
+  { icon: Film, label: "After Effects", className: "-bottom-5 -left-4 md:-left-8" },
+
 ];
 
 function Hero() {
@@ -23,9 +23,8 @@ function Hero() {
       <div className="pointer-events-none absolute -top-32 -left-24 w-[420px] h-[420px] rounded-full bg-[#0a2a88]/30 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-32 -right-16 w-[460px] h-[460px] rounded-full bg-[#59CDE9]/15 blur-[130px]" />
 
-      {/* Oversized background typography — kept tight/centered so it sits
-          right around the portrait photo, not spread across the whole section */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
+      {/* Oversized background typography — centered, image (z-10) sits right side on top of it */}
+      <div className="pointer-events-none pb-4 absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
         <motion.span
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -181,7 +180,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.92, rotate: -3 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-          className="order-1 md:order-2 relative mx-auto md:mx-0 w-fit"
+          className="order-1 md:order-2 relative mx-auto md:mx-0 md:ml-auto md:translate-x-6 lg:translate-x-10 w-fit"
         >
           <motion.div
             animate={{ y: [0, -12, 0] }}
@@ -196,7 +195,7 @@ function Hero() {
 
             <div className="p-1.5 rounded-3xl bg-gradient-to-br from-[#0a2a88]/40 via-[#59CDE9]/20 to-transparent">
               <img
-                src="arun.jpeg"
+                src="/arun.png"
                 alt="Arun - Video Editor & Motion Designer"
                 className="w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 rounded-[1.25rem] object-cover
                   drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]"

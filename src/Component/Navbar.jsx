@@ -119,12 +119,8 @@ export default function Navbar() {
                   }}
                 />
               </span>
-              <span
-                className="font-bold text-[17px] tracking-tight bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: `linear-gradient(90deg, ${SKY}, #ffffff, ${NAVY})`,
-                }}
-              >
+              {/* 👇 ab plain white text — koi blue "n" pe nahi aayega */}
+              <span className="font-bold text-[17px] tracking-tight text-white">
                 Arun
               </span>
             </motion.div>
@@ -192,7 +188,7 @@ export default function Navbar() {
                   whileHover={{ scale: 1.04, y: -1 }}
                   whileTap={{ scale: 0.97 }}
                   className="px-4 py-2 rounded-lg text-sm font-semibold cursor-pointer
-                    text-white border border-white/10
+                    text-white
                     hover:shadow-[0_0_22px_rgba(89,205,233,0.5)]
                     transition-shadow duration-300"
                   style={{
@@ -208,7 +204,7 @@ export default function Navbar() {
             <motion.button
               whileTap={{ scale: 0.87 }}
               onClick={() => setOpen(!open)}
-              className="md:hidden cursor-pointer border border-white/10
+              className="md:hidden cursor-pointer
                 p-2 rounded-xl text-white
                 shadow-[0_0_14px_rgba(89,205,233,0.4)]
                 transition-all duration-300"
@@ -318,7 +314,7 @@ export default function Navbar() {
                       whileTap={{ scale: 0.97 }}
                       className="w-full flex justify-center items-center gap-2
                       py-3 px-6 rounded-xl cursor-pointer
-                      text-sm font-semibold text-white border border-white/10
+                      text-sm font-semibold text-white
                       shadow-[0_0_20px_rgba(89,205,233,0.45)]
                       transition-shadow duration-300"
                       style={{
