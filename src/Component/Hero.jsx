@@ -180,7 +180,7 @@ function Hero() {
           initial={{ opacity: 0, scale: 0.92, rotate: -3 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-          className="order-1 md:order-2 relative mx-auto md:mx-0 md:ml-auto md:translate-x-6 lg:translate-x-10 w-fit"
+          className="order-1 md:order-2 relative mx-auto md:mx-0 md:ml-auto md:translate-x-0 lg:translate-x-0 w-fit"
         >
           <motion.div
             animate={{ y: [0, -12, 0] }}

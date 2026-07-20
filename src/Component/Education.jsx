@@ -13,7 +13,7 @@ const fadeUp = {
 
 const EDUCATION_ITEMS = [
   {
-    title: "Education — Senior Secondary",
+    title: "Education — Senior Secondary School",
     place: "Hisar",
     range: "2022",
   },

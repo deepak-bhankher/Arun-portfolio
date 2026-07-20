@@ -56,7 +56,7 @@ function Experience() {
           },
           {
             company: "Superblizz",
-            location: "Bangalore",
+            location: "Banglore",
             mode: "Freelance",
             range: "15 Nov 2025 – 10 May 2026",
             points: [
