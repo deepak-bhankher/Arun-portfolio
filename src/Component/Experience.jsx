@@ -57,7 +57,7 @@ function Experience() {
           {
             company: "Superblizz",
             location: "Bangalore",
-            mode: "Remote",
+            mode: "Freelance",
             range: "15 Nov 2025 – 10 May 2026",
             points: [
               "Handled full pipeline from raw footage to final export",
