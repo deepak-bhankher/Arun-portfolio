@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-
-import { Film, Clapperboard, Scissors } from "lucide-react";
+import { Film, Clapperboard, Palette } from "lucide-react";
 
 // 🎨 Premium palette — deep royal blue to sky cyan
 const NAVY = "#0a2a88";
@@ -9,8 +8,8 @@ const SKY = "#59CDE9";
 
 const CHIPS = [
   { icon: Clapperboard, label: "Premiere Pro", className: "-top-5 -left-6 md:-left-10" },
+  { icon: Palette, label: "Photoshop", className: "-top-5 -right-6 md:-right-10" },
   { icon: Film, label: "After Effects", className: "-bottom-5 -left-4 md:-left-8" },
-
 ];
 
 function Hero() {
@@ -24,7 +23,7 @@ function Hero() {
       <div className="pointer-events-none absolute -bottom-32 -right-16 w-[460px] h-[460px] rounded-full bg-[#59CDE9]/15 blur-[130px]" />
 
       {/* Oversized background typography — centered, image (z-10) sits right side on top of it */}
-      <div className="pointer-events-none -translate-y-6  hidden md:flex   absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
+      <div className="pointer-events-none -translate-y-6 hidden md:flex absolute inset-0 flex flex-col items-center justify-center select-none z-0 leading-none">
         <motion.span
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -100,20 +99,20 @@ function Hero() {
             Available for projects
           </motion.span>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          <h1 className="leading-tight">
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
-              className="block text-white/90"
+              className="block text-2xl sm:text-3xl lg:text-4xl font-semibold text-white/85 tracking-normal mb-1.5"
             >
-              Hi, I'm
+              Hi, I am
             </motion.span>
             <motion.span
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="block font-serif italic bg-gradient-to-r from-[#0a2a88] via-[#3E6FD9] to-[#59CDE9] bg-clip-text text-transparent drop-shadow-lg"
+              className="block text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-[#59CDE9] via-[#85E3F8] to-white bg-clip-text text-transparent drop-shadow-[0_0_40px_rgba(89,205,233,0.65)]"
             >
               Arun
             </motion.span>
@@ -123,7 +122,7 @@ function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.35 }}
-            className="mt-4 text-base sm:text-lg text-white/50 tracking-wide max-w-md mx-auto md:mx-0"
+            className="mt-4 text-base sm:text-lg text-white/60 tracking-wide max-w-md mx-auto md:mx-0"
           >
             Cutting stories that hold attention, frame by frame
           </motion.p>
@@ -171,8 +170,6 @@ function Hero() {
               </motion.button>
             </a>
           </motion.div>
-
-        
         </motion.div>
 
         {/* RIGHT — framed portrait */}
@@ -209,17 +206,19 @@ function Hero() {
                 initial={{ opacity: 0, scale: 0.7 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 + i * 0.15 }}
-                className={`absolute ${className} hidden sm:flex`}
+                className={`absolute ${className} z-20 hidden sm:flex`}
               >
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}
                   className="flex items-center gap-2 px-3 py-2 rounded-xl
-                    bg-[#050B1F]/90 backdrop-blur-md border border-[#59CDE9]/25 text-[#59CDE9]
-                    shadow-[0_8px_24px_rgba(0,0,0,0.45)]"
+                    bg-[#050B1F]/90 backdrop-blur-md border border-[#59CDE9]/35 text-[#59CDE9]
+                    shadow-[0_8px_24px_rgba(0,0,0,0.5),0_0_15px_rgba(89,205,233,0.15)]
+                    hover:border-[#59CDE9]/70 hover:shadow-[0_0_20px_rgba(89,205,233,0.3)]
+                    transition-all duration-300"
                 >
                   <Icon size={16} />
-                  <span className="text-xs font-medium whitespace-nowrap">{label}</span>
+                  <span className="text-xs font-semibold whitespace-nowrap text-white/95">{label}</span>
                 </motion.div>
               </motion.div>
             ))}

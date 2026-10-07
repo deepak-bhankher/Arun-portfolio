@@ -55,10 +55,10 @@ function Experience() {
             ],
           },
           {
-            company: "Superblizz",
+            company: "CirklX",
             location: "Banglore",
             mode: "Freelance",
-            range: "15 Nov 2025 – 10 May 2026",
+            range: "15 Nov 2025 – Present",
             points: [
               "Handled full pipeline from raw footage to final export",
               "Delivered consistent, on-brand edits across multiple projects",

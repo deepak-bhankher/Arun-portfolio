@@ -63,7 +63,7 @@ function About() {
           >
             I'm a passionate{" "}
             <span className="font-bold bg-[#59CDE9] bg-clip-text text-transparent">
-              Video Editor & Motion Designer
+              Video Editor
             </span>{" "}
             with 1+ years of experience turning raw footage into cinematic,
             high-converting content for brands, creators and businesses.
