@@ -56,8 +56,8 @@ function Experience() {
           },
           {
             company: "CirklX",
-            location: "Banglore",
-            mode: "Freelance",
+            location: "Hisar (haryana)",
+            mode:"Onsite",
             range: "15 Nov 2025 – Present",
             points: [
               "Handled full pipeline from raw footage to final export",
